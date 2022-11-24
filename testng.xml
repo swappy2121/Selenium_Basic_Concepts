@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" parallel="methods"  name="Parallel test execution">
+        <classes>
+            <class name = "com.bridgelabz.ParallelExecutionThroughBrowser.ParallelExecution" />
+            <class name = "com.bridgelabz.CrossBrowserTesting.RunSeleniumCodeInDiffBrowser" />
+        </classes>
+    </test>
+</suite>
