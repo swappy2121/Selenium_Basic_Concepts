@@ -7,8 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class Alert_PromptPopUp {
-    @Test
-    public void alert_Promptpopup() throws InterruptedException {
+     @Test
+    public void alert_Promptpopup1() throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         driver.get("http://www.tizag.com/javascriptT/javascriptprompt.php");
@@ -24,6 +24,24 @@ public class Alert_PromptPopUp {
         Thread.sleep(2000);
         System.out.println(alert.getText());
         alert.dismiss();
+        driver.close();
+    }
+
+    @Test
+    public void alert_Promptpopup2() throws InterruptedException {
+        System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://nxtgenaiacademy.com/alertandpopup/");
+        driver.findElement(By.name("promptalertbox1234")).click();
+        Thread.sleep(2000);
+        Alert alert = driver.switchTo().alert();
+        Thread.sleep(2000);
+        System.out.println(alert.getText());
+        Thread.sleep(2000);
+        alert.sendKeys("Yes");
+        Thread.sleep(2000);
+        alert.accept();
+        Thread.sleep(2000);
         driver.close();
     }
 }
